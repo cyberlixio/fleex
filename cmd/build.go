@@ -166,7 +166,7 @@ var buildCmd = &cobra.Command{
 			time.Sleep(8 * time.Second)
 			controller.CreateImage(token, provider, boxID, "Fleex-build-"+timeNow)
 			if deleteFlag {
-				time.Sleep(5 * time.Second)
+				time.Sleep(20 * time.Second)
 				controller.DeleteFleet(fleetName+"-1", token, provider)
 			}
 			utils.Log.Info("\nImage done!")
